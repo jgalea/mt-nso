@@ -1,6 +1,14 @@
+<div align="center">
+
 # mt-nso
 
-CLI for [Malta National Statistics Office](https://nso.gov.mt/) open data via the IRIS SDMX REST API.
+[![License](https://img.shields.io/badge/LICENSE-MIT-5C9E31?style=for-the-badge)](LICENSE)
+[![Python](https://img.shields.io/badge/PYTHON-3.9+-3776AB?style=for-the-badge)](https://www.python.org/)
+[![Built by](https://img.shields.io/badge/BUILT%20BY-JEAN%20GALEA-8A2BE2?style=for-the-badge)](https://github.com/jgalea)
+
+**CLI for Malta National Statistics Office open data (IRIS SDMX API).**
+
+</div>
 
 ```bash
 pip install -e .
