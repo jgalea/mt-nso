@@ -14,6 +14,10 @@ from mt_nso.sdmx import flatten_sdmx_json
 
 
 def main(argv: Sequence[str] | None = None) -> int:
+    # A Windows console or pipe may not be UTF-8; print what it can rather than crash.
+    for stream in (sys.stdout, sys.stderr):
+        if hasattr(stream, "reconfigure"):
+            stream.reconfigure(errors="replace")
     try:
         return _main(argv)
     except BrokenPipeError:

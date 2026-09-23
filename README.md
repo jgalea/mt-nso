@@ -18,6 +18,16 @@ mt-nso get cpi --start 2024 --format json
 
 ## Install
 
+Works on macOS, Linux and Windows. Python 3.9+, no third-party dependencies.
+
+```bash
+pipx install git+https://github.com/jgalea/mt-nso
+```
+
+`uv tool install git+https://github.com/jgalea/mt-nso` does the same.
+
+From a clone on macOS or Linux:
+
 ```bash
 cd mt-nso
 python3 -m venv .venv
@@ -27,13 +37,26 @@ pip install -e .
 mt-nso list
 ```
 
-Or without install:
+On Windows, in PowerShell:
+
+```powershell
+cd mt-nso
+py -m venv .venv
+.venv\Scripts\Activate.ps1
+pip install -e .
+
+mt-nso list
+```
+
+The Windows steps haven't been tested on a real Windows machine yet; if something breaks, open an issue.
+
+Or without installing:
 
 ```bash
 PYTHONPATH=src python3 -m mt_nso list
 ```
 
-No third-party dependencies. Python 3.9+.
+On Windows: `$env:PYTHONPATH = "src"; py -m mt_nso list`.
 
 ## Commands
 
